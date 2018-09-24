@@ -9,11 +9,11 @@
 #use timer(timer=2, tick=1ms, bits=16, ISR)
 
 //Set the sample frequency
-#define SAMPLE_FREQ  200 //50ms sample period
+#define SAMPLE_FREQ 1000 //50ms sample period
 
 //Set the PID Kp, Ki and Kd values
 #define KP_VALUE 4
-#define KI_VALUE 12
+#define KI_VALUE 10
 #define KD_VALUE 0
 
 #define  SCK pin_b4
