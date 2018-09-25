@@ -216,12 +216,13 @@ set_timer1(100);
 void main(void)
 { 
   TRIS_C13=1;
- setup_wdt (WDT_OFF);
+  setup_wdt (WDT_OFF);
   flg_t4=0;
   //trisb=0x000f;
   TRIS_E8=1;
   trisb3=trisb4=trisb5=1;
-  ptper=0x2f0;
+  //ptper=0x2f0;
+  ptper=0x3a0;
   SEVTCMP=ptper;
   ptmr=0x0000;
   //===============PMOD3(PWM3 MODE) PMDO2(PWM2MODE) AND PMOD1(PWM1MODE) FOR SELECT COMPLEMENTARY OR Independent mode
@@ -355,7 +356,7 @@ void getspeed(void)
     delay_us(10);
     duty = read_adc();
     if(duty<20)duty=20;
-    if(duty>500)duty=500;// maximum 30% of duty cycle
+    if(duty>700)duty=700;// maximum 30% of duty cycle
     
     pdc1= pdc2= pdc3=duty; 
   
