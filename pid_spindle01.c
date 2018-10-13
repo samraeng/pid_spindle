@@ -13,13 +13,18 @@
 
 //Set the PID Kp, Ki and Kd values
 #define KP_VALUE 5
-#define KI_VALUE 10
+#define KI_VALUE 20
 #define KD_VALUE 0
 
-#define  SCK pin_b4
-#define  SDI pin_b5
+//#define  SCK pin_b4
+//#define  SDI pin_b5
+//#define  LOAD pin_b7
+//#DEFINE  CS   PIN_b6
+
+#define  SCK pin_b5
+#define  SDI pin_b6
 #define  LOAD pin_b7
-#DEFINE  CS   PIN_b6
+#DEFINE  CS   PIN_b4
 //#define sw_manual pin_c6/////////////////////select mode//////////////
 
 int8 trisc;
